@@ -45,3 +45,7 @@ next-env.d.ts
 
 seed.ts
 
+# duplicate
+"package 2.json"
+package\ 2.json
+
