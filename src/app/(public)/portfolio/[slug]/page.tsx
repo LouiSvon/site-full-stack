@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { prisma } from "@/lib/prisma";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -48,7 +49,7 @@ export default async function ProjectPage({ params }: Props) {
         ))}
       </div>
       <div className="prose mt-8 max-w-none dark:prose-invert">
-        {project.content}
+        <ReactMarkdown>{project.content}</ReactMarkdown>
       </div>
       {project.projectUrl && (
         <a
